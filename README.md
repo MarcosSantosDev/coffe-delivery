@@ -1,7 +1,9 @@
 <div align="center">
-    <img src="./public/next.svg" width="200" alt="Logo Nexjs">
+    <h2>Coffe delivery  :coffee:</h2>
+    <p>application to manage a shopping cart of a fictional coffee shop</p>
 </div>
 
+[![Author: MarcosSantosDev](https://img.shields.io/badge/author-MarcosSantosDev-blue.svg)](https://opensource.org/licenses/MIT)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 
 ## 💻 Prerequisites
@@ -127,3 +129,5 @@ npm run ci:e2e
 
 - [Git](./docs/git.md)
 - [Sass](./docs/sass.md)
+
+Make with :heart: by [Marcos Santos](https://github.com/MarcosSantosDev)
