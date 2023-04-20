@@ -45,12 +45,6 @@ function plopGenerator(
 
       return [
         {
-          type: 'modify',
-          path: `${pathToComponentsFolder}/index.ts`,
-          pattern: /(\/\/ NEW PLOP COMPONENT EXPORT)/g,
-          template: `export { default as {{pascalCase componentName}} } from '.${componentContext}/{{pascalCase componentName}}/{{pascalCase componentName}}';\n$1`,
-        },
-        {
           type: 'add',
           path: `${pathToComponentFile}.tsx`,
           templateFile: 'templates/components/component.hbs',
