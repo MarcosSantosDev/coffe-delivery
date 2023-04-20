@@ -1,13 +1,3 @@
-html,
-body {
-  padding: 0;
-  margin: 0;
-  -webkit-font-smoothing: antialiased;
-  font-family: $font-family-primary;
-  font-size: $root-font-size;
-  background: $color-neutral-100;
-}
-
 button {
   cursor: pointer;
 }
@@ -24,6 +14,16 @@ button {
 html {
   line-height: 1.15; /* 1 */
   text-size-adjust: 100%; /* 2 */
+  font-size: $root-font-size;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  font-family: $font-family-primary;
+  font-size: 1.6rem;
+  background: $color-base-10;
 }
 
 /* Sections
