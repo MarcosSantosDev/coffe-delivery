@@ -1,0 +1,12 @@
+import { Metadata } from 'next';
+
+import styles from './{{pascalCase pageName}}.module.scss';
+
+export const metadata: Metadata = {
+  title: 'Coffe Delivery | {{pascalCase pageName}}',
+  description: 'Coffe Delivery | {{pascalCase pageName}}',
+};
+
+export default function {{pascalCase pageName}}Page() {
+  return <h2 className={styles.title}>Coffe Delivery</h2>;
+}

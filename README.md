@@ -1,5 +1,5 @@
 <div align="center">
-    <h2>Coffe delivery  :coffee:</h2>
+    <h2>Coffe delivery :coffee:</h2>
     <p>application to manage a shopping cart of a fictional coffee shop</p>
 </div>
 
@@ -33,10 +33,6 @@
 - [cypress(E2E)](https://www.cypress.io/)
 - [jest(unit/integration tests)](https://jestjs.io/pt-BR/)
 
-**Internacionalization**
-
-- [next-i18next (PT, EN)](https://next.i18next.com/)
-
 **Modules style**
 
 - [sass](https://sass-lang.com/)
@@ -50,7 +46,7 @@
 Clone the project:
 
 ```
-git clone https://github.com/MarcosSantosDev/nextjs-playground.git
+git clone https://github.com/MarcosSantosDev/coffe-delivery.git
 ```
 
 Install the dependencies:

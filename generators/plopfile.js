@@ -45,12 +45,6 @@ function plopGenerator(
 
       return [
         {
-          type: 'modify',
-          path: `${pathToComponentsFolder}/index.ts`,
-          pattern: /(\/\/ NEW PLOP COMPONENT EXPORT)/g,
-          template: `export { default as {{pascalCase componentName}} } from '.${componentContext}/{{pascalCase componentName}}/{{pascalCase componentName}}';\n$1`,
-        },
-        {
           type: 'add',
           path: `${pathToComponentFile}.tsx`,
           templateFile: 'templates/components/component.hbs',
@@ -58,17 +52,17 @@ function plopGenerator(
         {
           type: 'add',
           path: `${pathToComponentFile}.module.scss`,
-          templateFile: 'templates/components/styles.hbs',
+          templateFile: 'templates/components/component.module.scss.hbs',
         },
         {
           type: 'add',
-          path: `${pathToComponentFile}.types.tsx`,
-          templateFile: 'templates/components/types.hbs',
+          path: `${pathToComponentFile}.types.ts`,
+          templateFile: 'templates/components/component.types.ts.hbs',
         },
         {
           type: 'add',
           path: `${pathToComponentTestFile}.spec.tsx`,
-          templateFile: 'templates/components/tests.hbs',
+          templateFile: 'templates/components/component.spec.tsx.hbs',
         },
       ];
     },
@@ -79,11 +73,6 @@ function plopGenerator(
     prompts: [
       {
         type: 'input',
-        name: 'routeNameForThePage',
-        message: 'What is the route name for the page?',
-      },
-      {
-        type: 'input',
         name: 'pageName',
         message: 'What is the name of the page?',
       },
@@ -91,39 +80,18 @@ function plopGenerator(
     actions: [
       {
         type: 'add',
-        path: '../src/pages/{{kebabCase routeNameForThePage}}.tsx',
-        templateFile: 'templates/pages/page.hbs',
-      },
-      {
-        type: 'modify',
-        path: '../src/common/modules/index.ts',
-        pattern: /(\/\/ NEW PLOP MODULE EXPORT)/g,
-        template: `export { default as {{pascalCase pageName}} } from './{{pascalCase pageName}}/{{pascalCase pageName}}';\n$1`,
+        path: '../src/app/{{kebabCase pageName}}/page.tsx',
+        templateFile: 'templates/pages/page.tsx.hbs',
       },
       {
         type: 'add',
-        path: '../src/common/modules/{{pascalCase pageName}}/{{pascalCase pageName}}.tsx',
-        templateFile: 'templates/pages/module.hbs',
-      },
-      {
-        type: 'add',
-        path: '../src/common/modules/{{pascalCase pageName}}/{{pascalCase pageName}}.module.scss',
-        templateFile: 'templates/pages/module-style.hbs',
-      },
-      {
-        type: 'add',
-        path: '../src/common/language/pt/{{kebabCase pageName}}.json',
-        templateFile: 'templates/pages/language-pt.hbs',
-      },
-      {
-        type: 'add',
-        path: '../src/common/language/en/{{kebabCase pageName}}.json',
-        templateFile: 'templates/pages/language-en.hbs',
+        path: '../src/app/{{kebabCase pageName}}/{{pascalCase pageName}}.module.scss',
+        templateFile: 'templates/pages/page.module.scss.hbs',
       },
       {
         type: 'add',
         path: '../cypress/e2e/{{kebabCase pageName}}.cy.ts',
-        templateFile: 'templates/pages/e2e.hbs',
+        templateFile: 'templates/pages/page.cy.ts.hbs',
       },
     ],
   });
