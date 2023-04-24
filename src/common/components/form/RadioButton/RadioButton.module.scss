@@ -1,0 +1,40 @@
+@import 'utilities/variables';
+
+.label {
+  cursor: pointer;
+
+  input {
+    display: none;
+  }
+
+  input[type="radio"]:checked + button {
+    border-color: $color-product-purple;
+  }
+}
+
+.radio-button {
+  pointer-events: none;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 16px;
+  gap: 12px;
+  background: $color-product-purple-light;
+  border: 1px solid transparent;
+  border-radius: 6px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 100%;
+  text-transform: uppercase;
+  color: $color-base-80;
+
+  &:hover {
+    background: $color-base-60;
+  }
+
+  svg {
+    color: $color-product-purple;
+    fill: $color-product-purple;
+  }
+}
