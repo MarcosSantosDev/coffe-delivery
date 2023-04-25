@@ -1,0 +1,62 @@
+@import 'utilities/variables';
+
+.counter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: $color-base-50;
+  border-radius: 6px;
+  height: 32px;
+
+  button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    width: 30px;
+    border: none;
+    background-color: transparent;
+    font-size: 16px;
+    font-weight: bold;
+
+    &:disabled {
+      cursor: not-allowed;
+      opacity: 0.5;
+    }
+
+    svg {
+      color: $color-product-purple;
+      fill: $color-product-purple;
+
+    }
+
+    svg:hover {
+      color: $color-product-purple-dark;
+      fill: $color-product-purple-dark;
+    }
+  }
+
+  input[type="number"] {
+    margin: 0;
+    padding: 0;
+    border: none;
+    width: 30px;
+    height: fit-content;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 100%;
+    text-align: center;
+    color: $color-base-100;
+    background: transparent;
+    appearance: textfield;
+    pointer-events: none;
+
+    &::-webkit-inner-spin-button,
+    &::-webkit-outer-spin-button {
+      appearance: none;
+    }
+  }
+}
+
