@@ -55,7 +55,7 @@ function Counter({
   const incrementedCounter = () => dispatch({ type: 'incremented' });
 
   return (
-    <div role="generic" aria-label="counter" className={styles['number-input']}>
+    <div role="generic" aria-label="counter" className={styles.counter}>
       <button
         id="minus"
         aria-label="counter-minus-button"
