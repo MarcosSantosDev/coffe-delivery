@@ -52,6 +52,8 @@ const getPdSizeClass = (size?: CustomButton['size']) => {
   return '';
 };
 
+const allowedNumberOfChildElements = 2;
+
 function Button({
   children,
   custom = {
@@ -63,8 +65,8 @@ function Button({
     textWeight: 'normal',
   },
   counter = {
-    active: true,
-    value: 3,
+    active: false,
+    value: 0,
   },
   ...buttonProps
 }: ButtonProps) {
@@ -82,7 +84,10 @@ function Button({
     buttonStyleClasses.push(getCounterColorClass(custom.counterColor));
   }
 
-  const twoChildren = React.Children.toArray(children).slice(0, 2);
+  const childs = React.Children.toArray(children).slice(
+    0,
+    allowedNumberOfChildElements,
+  );
 
   return (
     <button
@@ -90,7 +95,7 @@ function Button({
       data-counter={counter.active ? counter.value : null}
       {...buttonProps}
     >
-      {twoChildren}
+      {childs}
     </button>
   );
 }
