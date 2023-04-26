@@ -1,0 +1,112 @@
+@import 'utilities/variables';
+
+.card {
+  position: relative;
+  background: #f3f2f2;
+  border-radius: 6px 36px;
+  padding: 20px 24px;
+  display: grid;
+  grid-template-rows: 60px auto 32px;
+  align-items: center;
+  grid-row-gap: 16px;
+  row-gap: 16px;
+  max-width: 256px;
+  width: 100%;
+  min-height: 310px;
+  max-height: 100%;
+
+  &__product-image {
+    position: absolute;
+    top: -10%;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    width: 120px;
+    height: 120px;
+  }
+
+  &__product {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto auto;
+    row-gap: 16px;
+
+    ul {
+      width: fit-content;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 4px;
+      flex-wrap: wrap;
+
+      li {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        list-style: none;
+        padding: 4px 8px;
+        width: fit-content;
+        background: #F1E9C9;
+        border-radius: 100px;
+        font-family: $font-family-primary;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 10px;
+        line-height: 130%;
+        text-transform: uppercase;
+        color: #C47F17;
+      }
+    }
+
+    &-information {
+      display: grid;
+      grid-template-rows: auto auto;
+      row-gap: 8px;
+
+      h3 {
+        margin: 0;
+        padding: 0;
+        font-family: $font-family-secondary;
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 100%;
+        color: #403937;
+        text-align: center;
+      }
+
+      p {
+        font-family: $font-family-primary;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 100%;
+        color: #8D8686;
+        text-align: center;
+      }
+    }
+  }
+
+  &__purchase-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+
+    &--price{
+      font-family: $font-family-secondary;
+      font-size: 14px;
+      font-style: normal;
+
+      strong {
+        font-style: normal;
+        font-size: 20px;
+        line-height: 100%;
+        color: #574F4D;
+      }
+    }
+
+    form {
+      display: flex;
+      gap: 8px;
+    }
+  }
+}
