@@ -22,6 +22,7 @@ function Counter({
   value: defaultValue = 0,
   min = 0,
   max,
+  onChange,
   ...counterProps
 }: CounterProps) {
   const [counterState, dispatch] = React.useReducer<CounterReducer['reducer']>(
@@ -33,10 +34,16 @@ function Counter({
       );
 
       if (action.type === 'incremented' && !maximumValueReached) {
+        if (onChange) {
+          onChange(state.value + 1);
+        }
         return { value: state.value + 1 };
       }
 
       if (action.type === 'decremented' && !minimumValueReached) {
+        if (onChange) {
+          onChange(state.value - 1);
+        }
         return { value: state.value - 1 };
       }
 
@@ -52,7 +59,7 @@ function Counter({
   );
 
   const decrementCounter = () => dispatch({ type: 'decremented' });
-  const incrementedCounter = () => dispatch({ type: 'incremented' });
+  const incrementCounter = () => dispatch({ type: 'incremented' });
 
   return (
     <div role="generic" aria-label="counter" className={styles.counter}>
@@ -83,7 +90,7 @@ function Counter({
         aria-label="counter-plus-button"
         role="spinbutton"
         type="button"
-        onClick={incrementedCounter}
+        onClick={incrementCounter}
         disabled={maximumValueReached}
       >
         <Plus size={16} weight="thin" />
