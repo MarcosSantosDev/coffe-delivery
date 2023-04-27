@@ -68,7 +68,7 @@ function Card({
 
           <Button
             type="submit"
-            title="add product"
+            title="adicionar produto"
             custom={{
               backgroundColor: 'purple-dark',
               iconColor: 'white',

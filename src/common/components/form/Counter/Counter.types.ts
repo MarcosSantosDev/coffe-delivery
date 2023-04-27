@@ -3,6 +3,7 @@ export interface CounterProps {
   value?: number;
   min?: number;
   max?: number;
+  onChange?: (quantity: number) => void;
 }
 
 export interface CounterReducer {
