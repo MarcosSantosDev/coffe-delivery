@@ -26,7 +26,7 @@ describe('Card component', () => {
     const elementCardTypes01 = screen.getByText(coffeMock.types[0]);
     const elementCardTypes02 = screen.getByText(coffeMock.types[1]);
     const elementCardPrice = screen.getByText(moneyMask(coffeMock.price));
-    const elementButtonAddProduct = screen.getByTitle(/add product/i);
+    const elementButtonAddProduct = screen.getByTitle(/adicionar produto/i);
 
     expect(elementCardImg).toBeInTheDocument();
     expect(elementCardImg).toHaveAttribute('src', coffeMock.pathImg);
@@ -38,10 +38,10 @@ describe('Card component', () => {
     expect(elementButtonAddProduct).toBeInTheDocument();
   });
 
-  it('should call the submit function when clicking the "add product" button', () => {
+  it('should call the submit function when clicking the "adicionar produto" button', () => {
     render(<Card {...coffeMock} onSubmit={onSubmitMocked} />);
 
-    const elementButtonAddProduct = screen.getByTitle(/add product/i);
+    const elementButtonAddProduct = screen.getByTitle(/adicionar produto/i);
 
     fireEvent.click(elementButtonAddProduct);
 
