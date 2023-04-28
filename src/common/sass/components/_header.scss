@@ -1,0 +1,49 @@
+.navigation {
+  &__menu {
+    position: relative;
+
+    &--toggle {
+      display: block;
+
+      @include md {
+        display: none;
+      }
+    }
+
+    nav {
+      display: none;
+
+      &#menu-actions.toggle-active {
+        display: flex;
+        align-items: flex-end;
+        flex-direction: column;
+        gap: 12px;
+        width: max-content;
+        padding: 10px;
+        background-color: $color-base-20;
+        border: 1px solid $color-base-50;
+        border-radius: 10px;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        z-index: 10;
+      }
+    }
+
+    nav, nav#menu-actions.toggle-active {
+      @include md {
+        display: flex;
+        align-items: flex-end;
+        flex-direction: row;
+        gap: 12px;
+        width: max-content;
+        padding: 0;
+        background-color: transparent;
+        border: none;
+        position: relative;
+        top: 0;
+        right: 0;
+      }
+    }
+  }
+}
