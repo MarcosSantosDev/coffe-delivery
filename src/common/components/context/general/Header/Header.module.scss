@@ -1,0 +1,34 @@
+@import 'utilities/variables';
+@import 'utilities/mixins';
+
+.navigation {
+  display: grid;
+  grid-template-columns: auto auto;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  background: $color-base-20;
+
+  img {
+    height: 32px;
+  }
+
+  @include md {
+    padding-top: 22px;
+    padding-bottom: 22px;
+
+    img {
+      height: 38px;
+    }
+  }
+
+  @include xl {
+    padding-top: 32px;
+    padding-bottom: 32px;
+
+    img {
+      height: 40px;
+    }
+  }
+}
