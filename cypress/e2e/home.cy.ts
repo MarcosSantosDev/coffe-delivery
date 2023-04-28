@@ -4,6 +4,6 @@ describe('Home page', () => {
   });
 
   it('should visit to the Home page', () => {
-    cy.contains('Coffe Delivery').should('be.visible');
+    cy.contains('Home').should('be.visible');
   });
 });
