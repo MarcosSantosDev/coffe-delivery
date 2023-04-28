@@ -1,7 +1,8 @@
 'use client';
 
 import * as React from 'react';
-import { Minus, Plus } from '@phosphor-icons/react';
+
+import { MinusBold, PlusBold } from '@/common/icons';
 
 import { CounterProps, CounterReducer } from './Counter.types';
 
@@ -71,7 +72,7 @@ function Counter({
         onClick={decrementCounter}
         disabled={minimumValueReached}
       >
-        <Minus size={16} weight="thin" />
+        <MinusBold size={16} />
       </button>
       <input
         aria-label="counter-input"
@@ -93,7 +94,7 @@ function Counter({
         onClick={incrementCounter}
         disabled={maximumValueReached}
       >
-        <Plus size={16} weight="thin" />
+        <PlusBold size={16} />
       </button>
     </div>
   );

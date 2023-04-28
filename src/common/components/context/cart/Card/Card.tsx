@@ -1,9 +1,9 @@
 import * as React from 'react';
-import { Trash } from '@phosphor-icons/react';
 import Image from 'next/image';
 
 import { Counter } from '@/common/components/form';
 import { Button } from '@/common/components/structure';
+import { Trash } from '@/common/icons';
 import { moneyMask } from '@/common/utils/masks';
 
 import { CardProps } from './Card.types';
@@ -55,7 +55,7 @@ function Card({
             }}
             onClick={handleRemoveProduct}
           >
-            <Trash size={16} weight="regular" />
+            <Trash size={16} />
             REMOVER
           </Button>
         </div>
