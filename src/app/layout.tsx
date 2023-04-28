@@ -2,6 +2,8 @@ import * as React from 'react';
 import { Metadata } from 'next';
 import { Baloo_2, Roboto } from 'next/font/google';
 
+import Header from '@/common/components/context/general/Header/Header';
+
 import '@/common/sass/main.scss';
 
 const roboto = Roboto({
@@ -36,7 +38,13 @@ export default function RootLayout({
   return (
     <html lang="pt" className={`${roboto.variable} ${baloo2.variable}`}>
       <body>
-        <div className="root-layout">{children}</div>
+        <div className="root-layout">
+          <Header />
+          <main>{children}</main>
+          <footer>
+            <h2>Footer</h2>
+          </footer>
+        </div>
       </body>
     </html>
   );

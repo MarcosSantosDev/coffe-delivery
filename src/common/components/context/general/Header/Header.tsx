@@ -1,9 +1,11 @@
+'use client';
+
 import * as React from 'react';
-import { List, MapPin, ShoppingCart } from '@phosphor-icons/react';
 import Image from 'next/image';
 
 import { Button } from '@/common/components/structure';
 import useClickOutsideAlert from '@/common/hooks/useOutSideClick';
+import { ListBold, MapPinFill, ShoppingCartFill } from '@/common/icons';
 
 import styles from './Header.module.scss';
 
@@ -69,7 +71,7 @@ function Header() {
             }}
             onClick={toggleNavigationActionsClass}
           >
-            <List size={22} weight="fill" />
+            <ListBold size={22} />
           </Button>
         </div>
 
@@ -86,7 +88,7 @@ function Header() {
             }}
             disabled
           >
-            <MapPin size={22} weight="fill" />
+            <MapPinFill size={22} />
             {coffeDeliveryToLocation}
           </Button>
 
@@ -102,7 +104,7 @@ function Header() {
             }}
             counter={cartCounter}
           >
-            <ShoppingCart size={22} weight="fill" />
+            <ShoppingCartFill size={22} />
           </Button>
         </nav>
       </div>
