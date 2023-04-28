@@ -1,12 +1,15 @@
-import { Metadata } from 'next';
-
-import styles from './Home.module.scss';
-
-export const metadata: Metadata = {
-  title: 'Coffe Delivery | Home',
-  description: 'Coffe Delivery | Home',
-};
-
 export default function HomePage() {
-  return <h2 className={styles.title}>Coffe Delivery</h2>;
+  return (
+    <>
+      <header>
+        <h2>Header</h2>
+      </header>
+      <main>
+        <h2>Home</h2>
+      </main>
+      <footer>
+        <h2>Footer</h2>
+      </footer>
+    </>
+  );
 }

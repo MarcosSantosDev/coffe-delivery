@@ -1,0 +1,41 @@
+%layout {
+  padding-left: 40px;
+  padding-right: 40px;
+
+  @include md {
+    padding-left: 80px;
+    padding-right: 80px;
+  }
+
+  @include xl {
+    padding-left: 160px;
+    padding-right: 160px;
+  }
+}
+
+.root-layout {
+  display: grid;
+  grid-template:
+    'head'
+    'main' 1fr
+    'foot';
+  min-height: 100vh;
+
+  header {
+    grid-area: head;
+
+    @extend %layout;
+  }
+
+  main {
+    grid-area: main;
+
+    @extend %layout;
+  }
+
+  footer {
+    grid-area: foot;
+
+    @extend %layout;
+  }
+}
