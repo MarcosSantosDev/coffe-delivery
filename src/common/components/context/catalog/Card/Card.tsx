@@ -1,9 +1,9 @@
 import * as React from 'react';
-import { ShoppingCartSimple } from '@phosphor-icons/react';
 import Image from 'next/image';
 
 import { Counter } from '@/common/components/form';
 import { Button } from '@/common/components/structure';
+import { ShoppingCartFill } from '@/common/icons';
 import { moneyMask } from '@/common/utils/masks';
 
 import { CardProps } from './Card.types';
@@ -75,7 +75,7 @@ function Card({
               size: 'sm',
             }}
           >
-            <ShoppingCartSimple size={14} weight="fill" />
+            <ShoppingCartFill size={14} />
           </Button>
         </form>
       </div>
