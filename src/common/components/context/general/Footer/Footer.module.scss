@@ -1,0 +1,117 @@
+@import 'utilities/variables';
+@import 'utilities/mixins';
+
+.footer {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  justify-content: space-between;
+  gap: 50px;
+  padding-top: 60px;
+  padding-bottom: 60px;
+  border-top: 1px solid $color-base-60;
+  color: $color-base-100;
+
+  .topic-title {
+    font-family: $font-family-secondary;
+    font-size: 1.6rem;
+    width: fit-content;
+  }
+
+  .topic-subtitle {
+    font-family: $font-family-secondary;
+    font-size: 1.4rem;
+    color: $color-base-80;
+  }
+
+  .topic-paragraph {
+    font-family: $font-family-secondary;
+    font-size: 1.4rem;
+    color: $color-base-80;
+  }
+
+  .topic-link {
+    font-family: $font-family-secondary;
+    font-size: 1.4rem;
+    color: $color-base-80;
+    width: fit-content;
+
+    &:hover {
+      filter: opacity(0.5);
+    }
+  }
+
+  .box-grid {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: repeat(2, min-content);
+    row-gap: 10px;
+  }
+
+  .service {
+    display: grid;
+    row-gap: 10px;
+
+    .contact {
+      display: grid;
+      row-gap: 4px;
+    }
+  }
+
+  .b2b {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: repeat(2, min-content);
+    row-gap: 20px;
+  }
+
+  .social {
+    display: grid;
+    grid-template-rows: repeat(3, min-content);
+    justify-items: flex-start;
+    row-gap: 20px;
+
+    &-icons {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      a:nth-child(1) {
+        svg:hover {
+          color: #1877f2;
+          fill: #1877f2;
+        }
+      }
+
+      a:nth-child(2) {
+        svg:hover {
+          color: #c32aa3;
+          fill: #c32aa3;
+        }
+      }
+
+      a:nth-child(3) {
+        svg:hover {
+          color: #25d366;
+          fill: #25d366;
+        }
+      }
+
+      a:nth-child(4) {
+        svg:hover {
+          color:  #f00;
+          fill:  #f00;
+        }
+      }
+    }
+  }
+
+  ul {
+    display: grid;
+    row-gap: 8px;
+
+    li {
+      list-style: none;
+    }
+  }
+}
