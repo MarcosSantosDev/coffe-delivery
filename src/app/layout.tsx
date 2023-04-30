@@ -2,6 +2,7 @@ import * as React from 'react';
 import { Metadata } from 'next';
 import { Baloo_2, Roboto } from 'next/font/google';
 
+import Footer from '@/common/components/context/general/Footer/Footer';
 import Header from '@/common/components/context/general/Header/Header';
 
 import '@/common/sass/main.scss';
@@ -41,9 +42,7 @@ export default function RootLayout({
         <div className="root-layout">
           <Header />
           <main>{children}</main>
-          <footer>
-            <h2>Footer</h2>
-          </footer>
+          <Footer />
         </div>
       </body>
     </html>
