@@ -23,6 +23,7 @@
 
   header {
     grid-area: head;
+    background-color: $color-base-20;
 
     @extend %layout;
   }
@@ -35,6 +36,7 @@
 
   footer {
     grid-area: foot;
+    background-color: $color-base-20;
 
     @extend %layout;
   }
