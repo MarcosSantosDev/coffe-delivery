@@ -17,7 +17,7 @@
 
   &__product-image {
     position: absolute;
-    top: -10%;
+    top: -5%;
     left: 0;
     right: 0;
     margin: 0 auto;
@@ -30,6 +30,7 @@
     grid-template-columns: auto;
     grid-template-rows: auto auto;
     row-gap: 16px;
+    justify-items: center;
 
     ul {
       width: fit-content;

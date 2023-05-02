@@ -1,9 +1,9 @@
-type CardData = {
+interface CardSubmitData {
   id: string;
   quantity: string;
-};
+}
 
-export interface CardProps {
+export interface CardData {
   id: string;
   pathImg: string;
   altImg: string;
@@ -11,5 +11,8 @@ export interface CardProps {
   title: string;
   description: string;
   price: number;
-  onSubmit: (data: CardData) => void;
+}
+
+export interface CardProps extends CardData {
+  onSubmit: (data: CardSubmitData) => void;
 }
