@@ -24,8 +24,8 @@ const baloo2 = Baloo_2({
 });
 
 export const metadata: Metadata = {
-  title: 'Coffe Delivery | Home',
-  description: 'Coffe Delivery | Home',
+  title: 'Coffe Delivery',
+  description: 'Coffe Delivery',
   icons: {
     shortcut: 'assets/app-logo.svg',
   },
