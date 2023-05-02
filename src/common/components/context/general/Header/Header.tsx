@@ -36,8 +36,8 @@ const toggleNavigationActionsClass = () => {
 
 const coffeDeliveryToLocation = 'Belo Horizonte, MG';
 const cartCounter = {
-  active: true,
-  value: 2,
+  active: false,
+  value: 0,
 };
 
 function Header() {
