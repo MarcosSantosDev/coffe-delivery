@@ -1,7 +1,6 @@
 import * as React from 'react';
 
-export interface TextFieldProps {
-  value?: string;
-  onChange?: React.ChangeEventHandler<HTMLInputElement>;
-  placeholder?: string;
+export interface TextFieldProps
+  extends React.InputHTMLAttributes<HTMLInputElement> {
+  name: string;
 }
