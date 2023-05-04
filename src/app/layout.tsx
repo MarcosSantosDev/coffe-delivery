@@ -29,6 +29,9 @@ export const metadata: Metadata = {
   icons: {
     shortcut: 'https://coffe-delivery-rocket.vercel.app/assets/app-logo.svg',
   },
+  alternates: {
+    canonical: 'https://coffe-delivery-rocket.vercel.app',
+  },
   openGraph: {
     url: 'https://coffe-delivery-rocket.vercel.app',
     type: 'website',
