@@ -1,0 +1,167 @@
+@import 'utilities/variables';
+@import 'utilities/mixins';
+
+.shopping-cart {
+  display: flex;
+  flex-direction: column;
+  row-gap: 15px;
+
+  &__title {
+    display: flex;
+    align-items: center;
+    font-family: $font-family-secondary;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 130%;
+    color: $color-base-90;
+  }
+
+  &__card-fields {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    row-gap: 32px;
+    background: $color-base-30;
+    border-radius: 6px;
+    max-width: 600px;
+    width: 100%;
+    padding: 40px;
+    overflow: unset;
+  }
+
+  &__card-fields--rounded-edge {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    row-gap: 32px;
+    background: $color-base-30;
+    border-radius: 6px;
+    max-width: 600px;
+    width: 100%;
+    padding: 40px;
+    overflow: unset;
+    border-top-right-radius: 44px;
+    border-bottom-left-radius: 44px;
+  }
+
+  &__topic {
+    display: grid;
+    grid-template-columns: auto auto;
+    column-gap: 10px;
+
+    &-text {
+      p {
+        font-style: normal;
+        font-weight: 400;
+        font-size: 1.6rem;
+        line-height: 130%;
+        color: $color-base-90;
+      }
+
+      span {
+        font-style: normal;
+        font-weight: 400;
+        font-size: 1.4rem;
+        line-height: 130%;
+        color: $color-base-90;
+      }
+    }
+  }
+
+  &__group-inputs {
+    max-width: 520px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas:
+      "cep . ."
+      "street street street"
+      "number complement complement"
+      "district city uf";
+    gap: 12px;
+
+    input:nth-child(1) {
+      grid-area: cep;
+    }
+
+    input:nth-child(2) {
+      grid-area: street;
+    }
+
+    input:nth-child(3) {
+      grid-area: number;
+    }
+
+    input:nth-child(4) {
+      grid-area: complement;
+    }
+
+    input:nth-child(5) {
+      grid-area: district;
+    }
+
+    input:nth-child(6) {
+      grid-area: city;
+    }
+
+    input:nth-child(7) {
+      grid-area: uf;
+    }
+  }
+
+  &__content-payment-cards {
+    max-width: 520px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: auto;
+    gap: 12px;
+
+    @include lg {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    label {
+      width: 100%;
+
+      button {
+        width: 100%;
+      }
+    }
+  }
+
+  &__content-coffe-list {
+    display: block;
+
+    hr.thematic-break:last-child {
+      margin-bottom: 0;
+    }
+
+    hr.thematic-break {
+      margin-bottom: 24px;
+      margin-top: 24px;
+      height: 1px;
+      border: none;
+      background-color: $color-base-50;
+    }
+  }
+
+  &__content-prices {
+    width: 100%;
+
+    tr {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    tr:nth-child(1), tr:nth-child(2) {
+      margin-bottom: 10px;
+    }
+
+    + button {
+      width: 100%;
+    }
+  }
+}
