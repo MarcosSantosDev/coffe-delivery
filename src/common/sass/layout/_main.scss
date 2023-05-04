@@ -1,6 +1,6 @@
 %layout {
-  padding-left: 10px;
-  padding-right: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
 
   @include sm {
     padding-left: 40px;
@@ -37,6 +37,14 @@
     grid-area: main;
 
     @extend %layout;
+
+    padding-top: 60px;
+    padding-bottom: 60px;
+
+    section {
+      padding-top: 32px;
+      padding-bottom: 92px;
+    }
   }
 
   footer {
