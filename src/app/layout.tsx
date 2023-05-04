@@ -27,7 +27,7 @@ export const metadata: Metadata = {
   title: 'Coffe Delivery',
   description: 'Coffe Delivery',
   icons: {
-    shortcut: 'assets/app-logo.svg',
+    shortcut: '/assets/app-logo.svg',
   },
 };
 
