@@ -3,9 +3,11 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
   gap: 40px;
 
   @include lg {
+    align-items: unset;
     flex-direction: row;
     gap: 15px;
   }
