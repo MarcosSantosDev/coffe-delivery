@@ -3,6 +3,17 @@ import { render, screen } from '@testing-library/react';
 
 import Header from '@/common/components/context/general/Header/Header';
 
+jest.mock('next/navigation', () => ({
+  useRouter() {
+    return {
+      route: '/',
+      pathname: '',
+      query: '',
+      asPath: '',
+    };
+  },
+}));
+
 describe('Header component', () => {
   it('should renders image, location and cart buttons', () => {
     render(<Header />);

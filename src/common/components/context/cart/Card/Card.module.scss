@@ -1,23 +1,37 @@
 @import 'utilities/variables';
+@import 'utilities/mixins';
 
 .card {
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: flex-start;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
   padding: 8px 4px;
   background: $color-base-30;
   column-gap: 20px;
+
+  @include sm {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
 
   &__product {
     display: grid;
     grid-template-areas:
       'title price'
-      'actions .';
+      'actions actions';
     grid-template-rows: auto auto;
     justify-content: space-between;
     column-gap: 60px;
     row-gap: 8px;
+    width: 100%;
+
+    @include sm {
+      grid-template-areas:
+      'title price'
+      'actions .';
+    }
 
     p {
       grid-area: title;
@@ -46,8 +60,15 @@
     &--actions {
       grid-area: actions;
       display: grid;
-      grid-template-columns: 72px min-content;
+      grid-template-columns: auto auto;
       column-gap: 8px;
+      justify-content: space-between;
+
+      @include sm {
+        display: grid;
+        grid-template-columns: 72px min-content;
+        column-gap: 8px;
+      }
     }
   }
 }
