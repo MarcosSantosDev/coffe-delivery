@@ -1,6 +1,7 @@
 'use client';
 
 import * as React from 'react';
+import { usePathname, useRouter } from 'next/navigation';
 
 import Card from '@/common/components/context/cart/Card/Card';
 import { RadioButton, TextField } from '@/common/components/form';
@@ -28,6 +29,9 @@ const deliveryValue = 'R$ 3,50';
 const amount = 'R$ 33,20';
 
 function Form() {
+  const router = useRouter();
+  const pathname = usePathname();
+
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     // const formData = new FormData(event.currentTarget);
@@ -43,6 +47,8 @@ function Form() {
     //   card: formData.get('card'),
     //   quantity: formData.get('quantity'),
     // };
+
+    router.push(`${pathname}/confirmed-order`);
   };
 
   const handleRemoveProduct = () => {
@@ -78,11 +84,13 @@ function Form() {
               id="address-street"
               name="address-street"
               placeholder="Rua"
+              required
             />
             <TextField
               id="address-number"
               name="address-number"
               placeholder="Número"
+              required
             />
             <TextField
               id="address-complement"
@@ -93,13 +101,20 @@ function Form() {
               id="address-district"
               name="address-district"
               placeholder="Bairro"
+              required
             />
             <TextField
               id="address-city"
               name="address-city"
               placeholder="Cidade"
+              required
             />
-            <TextField id="address-uf" name="address-uf" placeholder="UF" />
+            <TextField
+              id="address-uf"
+              name="address-uf"
+              placeholder="UF"
+              required
+            />
           </div>
         </div>
         <div className={styles['shopping-cart__card-fields']}>
@@ -115,15 +130,15 @@ function Form() {
             </div>
           </div>
           <div className={styles['shopping-cart__content-payment-cards']}>
-            <RadioButton name="card" value="credit-card">
+            <RadioButton name="card" value="credit-card" required>
               <ShoppingCartFill size={16} />
               CARTÃO CRÉDITO
             </RadioButton>
-            <RadioButton name="card" value="debit-card">
+            <RadioButton name="card" value="debit-card" required>
               <Bank size={16} />
               CARTÃO DÉBITO
             </RadioButton>
-            <RadioButton name="card" value="money">
+            <RadioButton name="card" value="money" required>
               <Money size={16} />
               DINHEIRO
             </RadioButton>
