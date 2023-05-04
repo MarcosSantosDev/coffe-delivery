@@ -27,7 +27,7 @@ export const metadata: Metadata = {
   title: 'Coffe Delivery',
   description: 'Coffe Delivery - A Sua Cafeteria Online',
   icons: {
-    shortcut: '/assets/app-logo.svg',
+    shortcut: 'https://coffe-delivery-rocket.vercel.app/assets/app-logo.svg',
   },
   openGraph: {
     type: 'website',
@@ -37,14 +37,14 @@ export const metadata: Metadata = {
     siteName: 'Coffe Delivery',
     images: [
       {
-        url: '/assets/app-logo.svg',
+        url: 'https://coffe-delivery-rocket.vercel.app/assets/app-logo.svg',
       },
     ],
   },
   twitter: {
     card: 'summary',
     creator: '@MarcosSantosDev',
-    images: '/assets/app-logo.svg',
+    images: 'https://coffe-delivery-rocket.vercel.app/assets/app-logo.svg',
   },
 };
 
