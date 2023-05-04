@@ -30,21 +30,25 @@ export const metadata: Metadata = {
     shortcut: 'https://coffe-delivery-rocket.vercel.app/assets/app-logo.svg',
   },
   openGraph: {
-    type: 'website',
     url: 'https://coffe-delivery-rocket.vercel.app',
+    type: 'website',
     title: 'Coffe Delivery',
-    description: 'Coffe Delivery - A Sua Cafeteria Online',
-    siteName: 'Coffe Delivery',
     images: [
       {
-        url: 'https://coffe-delivery-rocket.vercel.app/assets/app-logo.svg',
+        url: 'https://coffe-delivery-rocket.vercel.app/assets/pages/home_cup-of-coffee.svg',
       },
     ],
+    description: 'Coffe Delivery - A Sua Cafeteria Online',
+    siteName: 'Coffe Delivery',
   },
   twitter: {
     card: 'summary',
     creator: '@MarcosSantosDev',
-    images: 'https://coffe-delivery-rocket.vercel.app/assets/app-logo.svg',
+    images: [
+      {
+        url: 'https://coffe-delivery-rocket.vercel.app/assets/pages/home_cup-of-coffee.svg',
+      },
+    ],
   },
 };
 
