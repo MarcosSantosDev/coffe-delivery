@@ -4,7 +4,7 @@ import TextField from './TextField';
 
 describe('TextField component', () => {
   it('should be in the document', () => {
-    render(<TextField />);
+    render(<TextField name="my-input" />);
 
     const element = screen.getByRole('textbox');
 
@@ -14,7 +14,7 @@ describe('TextField component', () => {
   it('should calls onChange function when input value changes', () => {
     const onChange = jest.fn();
 
-    render(<TextField value="" onChange={onChange} />);
+    render(<TextField name="my-input" value="" onChange={onChange} />);
 
     const textField = screen.getByRole('textbox');
 
