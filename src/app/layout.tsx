@@ -38,7 +38,9 @@ export const metadata: Metadata = {
     title: 'Coffe Delivery',
     images: [
       {
-        url: 'https://coffe-delivery-rocket.vercel.app/assets/pages/home_cup-of-coffee.svg',
+        url: 'https://coffe-delivery-rocket.vercel.app/assets/pages/cup-of-coffee.png',
+        width: 1200,
+        height: 1200,
       },
     ],
     description: 'Coffe Delivery - A Sua Cafeteria Online',
@@ -49,7 +51,9 @@ export const metadata: Metadata = {
     creator: '@MarcosSantosDev',
     images: [
       {
-        url: 'https://coffe-delivery-rocket.vercel.app/assets/pages/home_cup-of-coffee.svg',
+        url: 'https://coffe-delivery-rocket.vercel.app/assets/pages/cup-of-coffee.png',
+        width: 1200,
+        height: 1200,
       },
     ],
   },
