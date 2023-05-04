@@ -24,52 +24,53 @@ const baloo2 = Baloo_2({
 });
 
 export const metadata: Metadata = {
-  title: 'Coffe Delivery',
-  description: 'Coffe Delivery - A Sua Cafeteria Online',
-  icons: {
-    shortcut: 'https://coffe-delivery-rocket.vercel.app/assets/app-logo.svg',
-  },
   alternates: {
     canonical: 'https://coffe-delivery-rocket.vercel.app',
   },
   openGraph: {
-    url: 'https://coffe-delivery-rocket.vercel.app',
     type: 'website',
     title: 'Coffe Delivery',
+    description: 'A Sua Cafeteria Online',
+    siteName: 'Coffe Delivery',
     images: [
       {
-        url: 'https://coffe-delivery-rocket.vercel.app/assets/pages/cup-of-coffee.png',
-        type: 'image/png',
+        url: 'https://coffe-delivery-rocket.vercel.app/assets/opengraph/og_coffe.jpg',
+        type: 'image/jpg',
         width: 1200,
         height: 630,
       },
       {
-        url: 'https://coffe-delivery-rocket.vercel.app/assets/pages/cup-of-coffee.png',
-        type: 'image/png',
+        url: 'https://coffe-delivery-rocket.vercel.app/assets/opengraph/og_coffe.jpg',
+        type: 'image/jpg',
         width: 400,
         height: 400,
       },
     ],
-    description: 'Coffe Delivery - A Sua Cafeteria Online',
-    siteName: 'Coffe Delivery',
+    locale: 'pt_BR',
+    url: 'https://coffe-delivery-rocket.vercel.app',
   },
   twitter: {
-    card: 'summary',
+    card: 'summary_large_image',
     creator: '@MarcosSantosDev',
     images: [
       {
-        url: 'https://coffe-delivery-rocket.vercel.app/assets/pages/cup-of-coffee.png',
-        type: 'image/png',
+        url: 'https://coffe-delivery-rocket.vercel.app/assets/opengraph/og_coffe.jpg',
+        type: 'image/jpg',
         width: 1200,
         height: 630,
       },
       {
-        url: 'https://coffe-delivery-rocket.vercel.app/assets/pages/cup-of-coffee.png',
-        type: 'image/png',
+        url: 'https://coffe-delivery-rocket.vercel.app/assets/opengraph/og_coffe.jpg',
+        type: 'image/jpg',
         width: 400,
         height: 400,
       },
     ],
+  },
+  title: 'Coffe Delivery',
+  description: 'Coffe Delivery - A Sua Cafeteria Online',
+  icons: {
+    shortcut: 'https://coffe-delivery-rocket.vercel.app/assets/app-logo.svg',
   },
 };
 
