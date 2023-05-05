@@ -73,7 +73,7 @@ export default function ConfirmedOrderPage() {
         <Image
           width={250}
           height={250}
-          src="/assets/pages/confirmed-order__delivery-illustration.svg"
+          src="/assets/app/delivery-illustration.svg"
           alt="Ilustração de entrega"
         />
       </div>

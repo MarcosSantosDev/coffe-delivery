@@ -22,7 +22,7 @@ export default function HomePage() {
         <Image
           width={200}
           height={200}
-          src="assets/pages/home_cup-of-coffee.svg"
+          src="assets/app/coffee-illustration.svg"
           alt="Copo de café"
         />
 
