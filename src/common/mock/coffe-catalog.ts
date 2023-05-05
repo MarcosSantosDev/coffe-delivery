@@ -3,7 +3,7 @@ import { CardData } from '@/common/components/context/catalog/Card/Card.types';
 export const coffeList: CardData[] = [
   {
     id: '1',
-    pathImg: 'assets/catalog/coffe-tradicional.svg',
+    pathImg: 'assets/catalog/traditional-coffee.svg',
     altImg: 'Expresso Tradicional',
     types: ['tradicional'],
     title: 'Expresso Tradicional',
@@ -12,7 +12,7 @@ export const coffeList: CardData[] = [
   },
   {
     id: '2',
-    pathImg: 'assets/catalog/coffe-americano.svg',
+    pathImg: 'assets/catalog/american-coffee.svg',
     altImg: 'Expresso Americano',
     types: ['tradicional'],
     title: 'Expresso Americano',
@@ -21,7 +21,7 @@ export const coffeList: CardData[] = [
   },
   {
     id: '3',
-    pathImg: 'assets/catalog/coffe-expresso-cremoso.svg',
+    pathImg: 'assets/catalog/creamy-espresso-coffee.svg',
     altImg: 'Expresso Cremoso',
     types: ['tradicional'],
     title: 'Expresso Cremoso',
@@ -30,7 +30,7 @@ export const coffeList: CardData[] = [
   },
   {
     id: '4',
-    pathImg: 'assets/catalog/coffe-cold.svg',
+    pathImg: 'assets/catalog/iced-espresso-coffee.svg',
     altImg: 'Expresso Gelado',
     types: ['tradicional', 'gelado'],
     title: 'Expresso Gelado',
@@ -39,7 +39,7 @@ export const coffeList: CardData[] = [
   },
   {
     id: '5',
-    pathImg: 'assets/catalog/coffe-with-milk.svg',
+    pathImg: 'assets/catalog/coffee-with-milk.svg',
     altImg: 'Café com Leite',
     types: ['tradicional', 'com leite'],
     title: 'Café com Leite',
@@ -48,7 +48,7 @@ export const coffeList: CardData[] = [
   },
   {
     id: '6',
-    pathImg: 'assets/catalog/coffe-latte.svg',
+    pathImg: 'assets/catalog/latte-coffee.svg',
     altImg: 'Latte',
     types: ['tradicional', 'com leite'],
     title: 'Latte',
@@ -58,7 +58,7 @@ export const coffeList: CardData[] = [
   },
   {
     id: '7',
-    pathImg: 'assets/catalog/coffe-capuccino.svg',
+    pathImg: 'assets/catalog/cappuccino-coffee.svg',
     altImg: 'Capuccino',
     types: ['tradicional', 'com leite'],
     title: 'Capuccino',
@@ -68,7 +68,7 @@ export const coffeList: CardData[] = [
   },
   {
     id: '8',
-    pathImg: 'assets/catalog/coffe-macchiato.svg',
+    pathImg: 'assets/catalog/macchiato-coffee.svg',
     altImg: 'Macchiato',
     types: ['tradicional', 'com leite'],
     title: 'Macchiato',
@@ -78,7 +78,7 @@ export const coffeList: CardData[] = [
   },
   {
     id: '9',
-    pathImg: 'assets/catalog/coffe-mocaccino.svg',
+    pathImg: 'assets/catalog/mocha-coffee.svg',
     altImg: 'Mocaccino',
     types: ['tradicional', 'com leite'],
     title: 'Mocaccino',
@@ -87,7 +87,7 @@ export const coffeList: CardData[] = [
   },
   {
     id: '10',
-    pathImg: 'assets/catalog/coffe-capuccino.svg',
+    pathImg: 'assets/catalog/cappuccino-coffee.svg',
     altImg: 'Chocolate Quente',
     types: ['especial', 'com leite'],
     title: 'Chocolate Quente',
@@ -96,7 +96,7 @@ export const coffeList: CardData[] = [
   },
   {
     id: '11',
-    pathImg: 'assets/catalog/coffe-cubano.svg',
+    pathImg: 'assets/catalog/cuban-coffee.svg',
     altImg: 'Cubano',
     types: ['especial', 'alcoólico', 'gelado'],
     title: 'Cubano',
@@ -106,7 +106,7 @@ export const coffeList: CardData[] = [
   },
   {
     id: '12',
-    pathImg: 'assets/catalog/coffe-havaiano.svg',
+    pathImg: 'assets/catalog/hawaiian-coffee.svg',
     altImg: 'Havaiano',
     types: ['especial', 'alcoólico'],
     title: 'Havaiano',
@@ -115,7 +115,7 @@ export const coffeList: CardData[] = [
   },
   {
     id: '13',
-    pathImg: 'assets/catalog/coffe-arabe.svg',
+    pathImg: 'assets/catalog/arabic-coffee.svg',
     altImg: 'Árabe',
     types: ['especial'],
     title: 'Árabe',
@@ -124,7 +124,7 @@ export const coffeList: CardData[] = [
   },
   {
     id: '14',
-    pathImg: 'assets/catalog/coffe-irlandes.svg',
+    pathImg: 'assets/catalog/irish-coffee.svg',
     altImg: 'Irlandês',
     types: ['especial', 'alcoólico'],
     title: 'Irlandês',

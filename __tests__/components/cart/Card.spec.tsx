@@ -5,7 +5,7 @@ import { moneyMask } from '@/common/utils/masks';
 
 const coffeMock = {
   id: '132',
-  pathImg: 'assets/catalog/coffe-capuccino.svg',
+  pathImg: 'assets/catalog/cappuccino-coffee.svg',
   altImg: 'coffe american',
   title: 'Capuccino',
   price: 9.9,
