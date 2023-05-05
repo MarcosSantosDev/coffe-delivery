@@ -34,13 +34,13 @@ export const metadata: Metadata = {
     siteName: 'Coffe Delivery',
     images: [
       {
-        url: '/assets/opengraph/og_coffe.jpg',
+        url: 'https://coffee-delivery-rocket.vercel.app/assets/opengraph/og_coffe.jpg',
         type: 'image/jpg',
         width: 1200,
         height: 630,
       },
       {
-        url: '/assets/opengraph/og_coffe.jpg',
+        url: 'https://coffee-delivery-rocket.vercel.app/assets/opengraph/og_coffe.jpg',
         type: 'image/jpg',
         width: 400,
         height: 400,
@@ -54,13 +54,13 @@ export const metadata: Metadata = {
     creator: '@MarcosSantosDev',
     images: [
       {
-        url: '/assets/opengraph/og_coffe.jpg',
+        url: 'https://coffee-delivery-rocket.vercel.app/assets/opengraph/og_coffe.jpg',
         type: 'image/jpg',
         width: 1200,
         height: 630,
       },
       {
-        url: '/assets/opengraph/og_coffe.jpg',
+        url: 'https://coffee-delivery-rocket.vercel.app/assets/opengraph/og_coffe.jpg',
         type: 'image/jpg',
         width: 400,
         height: 400,
