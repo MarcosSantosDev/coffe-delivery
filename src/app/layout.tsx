@@ -70,7 +70,8 @@ export const metadata: Metadata = {
   title: 'Coffe Delivery',
   description: 'Coffe Delivery - A Sua Cafeteria Online',
   icons: {
-    shortcut: 'https://coffe-delivery-rocket.vercel.app/assets/app-logo.svg',
+    shortcut:
+      'https://coffe-delivery-rocket.vercel.app/assets/app/coffe-delivery-logo.svg',
   },
 };
 
