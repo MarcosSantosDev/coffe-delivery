@@ -25,7 +25,7 @@ const baloo2 = Baloo_2({
 
 export const metadata: Metadata = {
   alternates: {
-    canonical: 'https://coffe-delivery-rocket.vercel.app',
+    canonical: 'https://coffee-delivery-rocket.vercel.app',
   },
   openGraph: {
     type: 'website',
@@ -34,44 +34,43 @@ export const metadata: Metadata = {
     siteName: 'Coffe Delivery',
     images: [
       {
-        url: 'https://coffe-delivery-rocket.vercel.app/assets/opengraph/og_coffe.jpg',
+        url: '/assets/opengraph/og_coffe.jpg',
         type: 'image/jpg',
         width: 1200,
         height: 630,
       },
       {
-        url: 'https://coffe-delivery-rocket.vercel.app/assets/opengraph/og_coffe.jpg',
+        url: '/assets/opengraph/og_coffe.jpg',
         type: 'image/jpg',
         width: 400,
         height: 400,
       },
     ],
     locale: 'pt_BR',
-    url: 'https://coffe-delivery-rocket.vercel.app',
+    url: 'https://coffee-delivery-rocket.vercel.app',
   },
   twitter: {
     card: 'summary_large_image',
     creator: '@MarcosSantosDev',
     images: [
       {
-        url: 'https://coffe-delivery-rocket.vercel.app/assets/opengraph/og_coffe.jpg',
+        url: '/assets/opengraph/og_coffe.jpg',
         type: 'image/jpg',
         width: 1200,
         height: 630,
       },
       {
-        url: 'https://coffe-delivery-rocket.vercel.app/assets/opengraph/og_coffe.jpg',
+        url: '/assets/opengraph/og_coffe.jpg',
         type: 'image/jpg',
         width: 400,
         height: 400,
       },
     ],
   },
-  title: 'Coffe Delivery',
+  title: 'Coffe Delivery - Encontre o café perfeito para qualquer hora do dia',
   description: 'Coffe Delivery - A Sua Cafeteria Online',
   icons: {
-    shortcut:
-      'https://coffe-delivery-rocket.vercel.app/assets/app/coffe-delivery-logo.svg',
+    shortcut: '/assets/app/coffee-delivery-logo.svg',
   },
 };
 

@@ -18,7 +18,7 @@ import styles from './Form.module.scss';
 
 const coffeMock = {
   id: '1',
-  pathImg: 'assets/catalog/coffe-capuccino.svg',
+  pathImg: 'assets/catalog/cappuccino-coffee.svg',
   altImg: 'coffe american',
   title: 'Capuccino',
   price: 9.9,
@@ -148,7 +148,7 @@ function Form() {
       <div className={styles['shopping-cart']}>
         <h4 className={styles['shopping-cart__title']}>Cafés selecionados</h4>
         <div className={styles['shopping-cart__card-fields--rounded-edge']}>
-          <div className={styles['shopping-cart__content-coffe-list']}>
+          <div className={styles['shopping-cart__content-coffee-list']}>
             <Card
               {...coffeMock}
               onRemove={handleRemoveProduct}
