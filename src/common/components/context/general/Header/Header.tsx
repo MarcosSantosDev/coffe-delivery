@@ -16,7 +16,7 @@ function Header() {
       <Link href="/">
         <Image
           role="none"
-          src="/assets/app-logo.svg"
+          src="/assets/app/coffee-delivery-logo.svg"
           alt="Coffe delivery"
           width={85}
           height={40}

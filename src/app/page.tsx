@@ -9,7 +9,7 @@ import {
   ShoppingCartFill,
   TimerFill,
 } from '@/common/icons';
-import { coffeList } from '@/common/mock/home';
+import { coffeList } from '@/common/mock/coffe-catalog';
 
 export default function HomePage() {
   const handleBuyCoffe = () => {
@@ -22,7 +22,7 @@ export default function HomePage() {
         <Image
           width={200}
           height={200}
-          src="assets/pages/home_cup-of-coffee.svg"
+          src="assets/app/coffee-illustration.svg"
           alt="Copo de café"
         />
 
@@ -66,7 +66,7 @@ export default function HomePage() {
       <section className="home__section--two">
         <h2 className="title">Nossos cafés</h2>
 
-        <div className="coffe-list">
+        <div className="coffee-list">
           {coffeList.map(coffe => (
             <Card {...coffe} key={coffe.id} onSubmit={handleBuyCoffe} />
           ))}

@@ -46,7 +46,7 @@
 Clone the project:
 
 ```
-git clone https://github.com/MarcosSantosDev/coffe-delivery.git
+git clone https://github.com/MarcosSantosDev/coffee-delivery.git
 ```
 
 Install the dependencies:
