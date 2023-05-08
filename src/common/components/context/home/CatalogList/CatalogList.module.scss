@@ -1,0 +1,7 @@
+.coffee-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(256px, 1fr));
+  column-gap: 32px;
+  row-gap: 52px;
+  justify-items: center;
+}

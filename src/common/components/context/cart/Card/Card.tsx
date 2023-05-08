@@ -12,36 +12,28 @@ import { CardProps } from './Card.types';
 
 import styles from './Card.module.scss';
 
-function Card({
-  id,
-  pathImg,
-  altImg,
-  title,
-  price,
-  onRemove,
-  onChangeQuantity,
-}: CardProps) {
-  const handleRemoveProduct = () => onRemove(id);
+function Card({ cartProduct, onRemove, onChangeQuantity }: CardProps) {
+  const handleRemoveProduct = () => onRemove(cartProduct.id);
 
   return (
     <div className={styles.card}>
       <Image
         className={styles['card__product-image']}
-        src={pathImg}
-        alt={altImg}
+        src={cartProduct.pathImg}
+        alt={cartProduct.altImg}
         width={64}
         height={64}
       />
 
       <div className={styles.card__product}>
-        <p>{title}</p>
+        <p>{cartProduct.title}</p>
 
-        <strong>R$ {moneyMask(price)}</strong>
+        <strong>R$ {moneyMask(cartProduct.price)}</strong>
 
         <div className={styles['card__product--actions']}>
           <Counter
             name="quantity"
-            value={1}
+            value={cartProduct.quantity}
             min={1}
             onChange={onChangeQuantity}
           />

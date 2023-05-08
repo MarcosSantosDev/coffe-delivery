@@ -1,6 +1,6 @@
-import { CardData } from '@/common/components/context/catalog/Card/Card.types';
+import { CardProps } from '@/common/components/context/home/Card/Card.types';
 
-export const coffeList: CardData[] = [
+export const coffeList: CardProps['catalogProduct'][] = [
   {
     id: '1',
     pathImg: 'assets/catalog/traditional-coffee.svg',
@@ -9,6 +9,7 @@ export const coffeList: CardData[] = [
     title: 'Expresso Tradicional',
     description: 'O tradicional café feito com água quente e grãos moídos',
     price: 9.9,
+    active: false,
   },
   {
     id: '2',
@@ -18,6 +19,7 @@ export const coffeList: CardData[] = [
     title: 'Expresso Americano',
     description: 'Expresso diluído, menos intenso que o tradicional',
     price: 9.9,
+    active: false,
   },
   {
     id: '3',
@@ -27,6 +29,7 @@ export const coffeList: CardData[] = [
     title: 'Expresso Cremoso',
     description: 'Café expresso tradicional com espuma cremosa',
     price: 9.9,
+    active: false,
   },
   {
     id: '4',
@@ -36,6 +39,7 @@ export const coffeList: CardData[] = [
     title: 'Expresso Gelado',
     description: 'Bebida preparada com café expresso e cubos de gelo',
     price: 9.9,
+    active: false,
   },
   {
     id: '5',
@@ -45,6 +49,7 @@ export const coffeList: CardData[] = [
     title: 'Café com Leite',
     description: 'Meio a meio de expresso tradicional com leite vaporizado',
     price: 9.9,
+    active: false,
   },
   {
     id: '6',
@@ -55,6 +60,7 @@ export const coffeList: CardData[] = [
     description:
       'Uma dose de café expresso com o dobro de leite e espuma cremosa',
     price: 9.9,
+    active: false,
   },
   {
     id: '7',
@@ -65,6 +71,7 @@ export const coffeList: CardData[] = [
     description:
       'Bebida com canela feita de doses iguais de café, leite e espuma',
     price: 9.9,
+    active: false,
   },
   {
     id: '8',
@@ -75,6 +82,7 @@ export const coffeList: CardData[] = [
     description:
       'Café expresso misturado com um pouco de leite quente e espuma',
     price: 9.9,
+    active: false,
   },
   {
     id: '9',
@@ -84,6 +92,7 @@ export const coffeList: CardData[] = [
     title: 'Mocaccino',
     description: 'Café expresso com calda de chocolate, pouco leite e espuma',
     price: 9.9,
+    active: false,
   },
   {
     id: '10',
@@ -93,6 +102,7 @@ export const coffeList: CardData[] = [
     title: 'Chocolate Quente',
     description: 'Bebida feita com chocolate dissolvido no leite quente e café',
     price: 9.9,
+    active: false,
   },
   {
     id: '11',
@@ -103,6 +113,7 @@ export const coffeList: CardData[] = [
     description:
       'Drink gelado de café expresso com rum, creme de leite e hortelã',
     price: 9.9,
+    active: false,
   },
   {
     id: '12',
@@ -112,6 +123,7 @@ export const coffeList: CardData[] = [
     title: 'Havaiano',
     description: 'Bebida adocicada preparada com café e leite de coco',
     price: 9.9,
+    active: false,
   },
   {
     id: '13',
@@ -121,6 +133,7 @@ export const coffeList: CardData[] = [
     title: 'Árabe',
     description: 'Bebida preparada com grãos de café árabe e especiarias',
     price: 9.9,
+    active: false,
   },
   {
     id: '14',
@@ -130,5 +143,6 @@ export const coffeList: CardData[] = [
     title: 'Irlandês',
     description: 'Bebida a base de café, uísque irlandês, açúcar e chantilly',
     price: 9.9,
+    active: false,
   },
 ];

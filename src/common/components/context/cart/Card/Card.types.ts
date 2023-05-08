@@ -1,9 +1,7 @@
+import { CartProduct } from '@/common/types/cart';
+
 export interface CardProps {
-  id: string;
-  pathImg: string;
-  altImg: string;
-  title: string;
-  price: number;
+  cartProduct: CartProduct;
   onRemove: (id: string) => void;
   onChangeQuantity: (quantity: number) => void;
 }

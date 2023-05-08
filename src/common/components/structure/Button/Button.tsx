@@ -1,3 +1,5 @@
+'use client';
+
 import * as React from 'react';
 
 import { ButtonProps, CustomButton, VariantColor } from './Button.types';
@@ -30,7 +32,7 @@ const getSvgColorClass = (color?: VariantColor) => {
 
 const getCounterColorClass = (color?: Omit<VariantColor, 'white'>) => {
   if (color) {
-    return styles[`counter__bg-color--${color}`];
+    return `button-counter__bg-color--${color}`;
   }
 
   return '';
@@ -64,12 +66,11 @@ function Button({
     size: 'md',
     textWeight: 'normal',
   },
-  counter = {
-    active: false,
-    value: 0,
-  },
+  counter,
   ...buttonProps
 }: ButtonProps) {
+  const buttonCounterRef = React.useRef<HTMLButtonElement>(null);
+
   const buttonStyleClasses = [
     styles.button,
     getTextColorClass(custom.textColor),
@@ -77,24 +78,33 @@ function Button({
     getSvgColorClass(custom.iconColor),
     getPdSizeClass(custom.size),
     getTextWeightClass(custom.textWeight),
-  ];
-
-  if (counter.active) {
-    buttonStyleClasses.push(styles.counter);
-    buttonStyleClasses.push(getCounterColorClass(custom.counterColor));
-  }
+  ].filter(Boolean);
 
   const childs = React.Children.toArray(children).slice(
     0,
     allowedNumberOfChildElements,
   );
 
+  React.useEffect(() => {
+    if (buttonCounterRef.current !== null && counter) {
+      const counterClass = getCounterColorClass(custom.counterColor);
+
+      if (counter.active) {
+        buttonCounterRef.current.classList.remove('button-counter__hiden');
+        buttonCounterRef.current.classList.add(counterClass);
+      } else {
+        buttonCounterRef.current.classList.remove(counterClass);
+        buttonCounterRef.current.classList.add('button-counter__hiden');
+      }
+      buttonCounterRef.current.innerHTML = counter.value.toString();
+    }
+  }, [counter, custom.counterColor]);
+
   return (
-    <button
-      className={buttonStyleClasses.join(' ')}
-      data-counter={counter.active ? counter.value : null}
-      {...buttonProps}
-    >
+    <button {...buttonProps} className={buttonStyleClasses.join(' ')}>
+      <span ref={buttonCounterRef} className="button-counter__hiden">
+        0
+      </span>
       {childs}
     </button>
   );
