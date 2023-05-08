@@ -3,7 +3,7 @@
 import * as React from 'react';
 import { usePathname, useRouter } from 'next/navigation';
 
-import Card from '@/common/components/context/cart/Card/Card';
+import CartList from '@/common/components/context/cart/CartList/CartList';
 import { RadioButton, TextField } from '@/common/components/form';
 import { Button } from '@/common/components/structure';
 import {
@@ -15,18 +15,6 @@ import {
 } from '@/common/icons';
 
 import styles from './Form.module.scss';
-
-const coffeMock = {
-  id: '1',
-  pathImg: 'assets/catalog/cappuccino-coffee.svg',
-  altImg: 'coffe american',
-  title: 'Capuccino',
-  price: 9.9,
-};
-
-const totalValueOfProducts = 'R$ 29,70';
-const deliveryValue = 'R$ 3,50';
-const amount = 'R$ 33,20';
 
 function Form() {
   const router = useRouter();
@@ -49,14 +37,6 @@ function Form() {
     // };
 
     router.push(`${pathname}/confirmed-order`);
-  };
-
-  const handleRemoveProduct = () => {
-    //
-  };
-
-  const handleChangeQuantity = () => {
-    //
   };
 
   return (
@@ -147,33 +127,10 @@ function Form() {
       </div>
       <div className={styles['shopping-cart']}>
         <h4 className={styles['shopping-cart__title']}>Cafés selecionados</h4>
+
         <div className={styles['shopping-cart__card-fields--rounded-edge']}>
-          <div className={styles['shopping-cart__content-coffee-list']}>
-            <Card
-              {...coffeMock}
-              onRemove={handleRemoveProduct}
-              onChangeQuantity={handleChangeQuantity}
-            />
-            <hr className={styles['thematic-break']} />
-          </div>
-          <table className={styles['shopping-cart__content-prices']}>
-            <tr>
-              <td>Total de itens</td>
-              <td>{totalValueOfProducts}</td>
-            </tr>
-            <tr>
-              <td>Entrega</td>
-              <td>{deliveryValue}</td>
-            </tr>
-            <tr>
-              <td>
-                <strong>Total</strong>
-              </td>
-              <td>
-                <strong>{amount}</strong>
-              </td>
-            </tr>
-          </table>
+          <CartList />
+
           <Button
             type="submit"
             custom={{

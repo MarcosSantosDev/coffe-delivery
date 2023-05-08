@@ -8,6 +8,10 @@
   row-gap: 15px;
   width: 100%;
 
+  &:nth-child(1) {
+    align-self: flex-end;
+  }
+
   @include lg {
     align-items: unset;
     width: auto;
@@ -59,6 +63,10 @@
 
     @include sm {
       padding: 40px;
+    }
+
+    button {
+      width: 100%;
     }
   }
 
@@ -156,40 +164,6 @@
       button {
         width: 100%;
       }
-    }
-  }
-
-  &__content-coffee-list {
-    display: block;
-    width: 100%;
-
-    hr.thematic-break:last-child {
-      margin-bottom: 0;
-    }
-
-    hr.thematic-break {
-      margin-bottom: 24px;
-      margin-top: 24px;
-      height: 1px;
-      border: none;
-      background-color: $color-base-50;
-    }
-  }
-
-  &__content-prices {
-    width: 100%;
-
-    tr {
-      display: flex;
-      justify-content: space-between;
-    }
-
-    tr:nth-child(1), tr:nth-child(2) {
-      margin-bottom: 10px;
-    }
-
-    + button {
-      width: 100%;
     }
   }
 }

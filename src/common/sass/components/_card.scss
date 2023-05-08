@@ -1,0 +1,6 @@
+.catalog-card {
+  &__active {
+    border: 1px dashed $color-product-yellow;
+    box-shadow: 0 0 0 $color-product-yellow;
+  }
+}

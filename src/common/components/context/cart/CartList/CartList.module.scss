@@ -1,0 +1,54 @@
+@import 'utilities/variables';
+
+.coffee-shopping {
+  &__empty-card {
+    display: block;
+    width: 100%;
+    height: min-content;
+    text-align: center;
+    padding: 16px;
+    border-radius: 6px 44px;
+    background: $color-product-yellow-light;
+
+    svg {
+      color: $color-product-yellow-dark;
+      fill: $color-product-yellow-dark;
+    }
+
+    h4 {
+      font-family: $font-family-secondary;
+      font-size: 1.8rem;
+    }
+  }
+
+  &__list {
+    display: block;
+    width: 100%;
+
+    hr.thematic-break:last-child {
+      margin-bottom: 0;
+    }
+
+    hr.thematic-break {
+      margin-bottom: 24px;
+      margin-top: 24px;
+      height: 1px;
+      border: none;
+      background-color: $color-base-50;
+    }
+  }
+
+  &__prices {
+    width: 100%;
+    font-size: 1.6rem;
+
+    tr {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    tr:nth-child(1), tr:nth-child(2) {
+      margin-bottom: 10px;
+    }
+  }
+}

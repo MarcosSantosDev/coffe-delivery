@@ -1,6 +1,6 @@
 .shopping-cart {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: 1fr;
   justify-content: center;
   align-items: center;
   gap: 40px;
@@ -9,8 +9,8 @@
 
 
   @include lg {
+    grid-template-columns: auto 50%;
     align-items: unset;
-    flex-direction: row;
     gap: 15px;
   }
 
