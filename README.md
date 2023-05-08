@@ -1,6 +1,9 @@
 <div align="center">
     <h2>Coffe delivery :coffee:</h2>
     <p>application to manage a shopping cart of a fictional coffee shop</p>
+  
+   ![342shots_so](https://user-images.githubusercontent.com/26147340/236956640-1e1f7dd6-c4ea-4043-a13d-f5788318bb2d.png)
+
 </div>
 
 [![Author: MarcosSantosDev](https://img.shields.io/badge/author-MarcosSantosDev-blue.svg)](https://opensource.org/licenses/MIT)
