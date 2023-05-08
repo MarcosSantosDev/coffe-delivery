@@ -86,13 +86,17 @@ function Button({
   );
 
   React.useEffect(() => {
-    if (buttonCounterRef.current !== null) {
-      if (counter && counter.active) {
-        const counterClass = getCounterColorClass(custom.counterColor);
+    if (buttonCounterRef.current !== null && counter) {
+      const counterClass = getCounterColorClass(custom.counterColor);
+
+      if (counter.active) {
         buttonCounterRef.current.classList.remove('button-counter__hiden');
         buttonCounterRef.current.classList.add(counterClass);
-        buttonCounterRef.current.innerHTML = counter.value.toString();
+      } else {
+        buttonCounterRef.current.classList.remove(counterClass);
+        buttonCounterRef.current.classList.add('button-counter__hiden');
       }
+      buttonCounterRef.current.innerHTML = counter.value.toString();
     }
   }, [counter, custom.counterColor]);
 
