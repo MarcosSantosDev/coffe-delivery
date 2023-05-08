@@ -10,36 +10,43 @@ import { CardProps } from './Card.types';
 
 import styles from './Card.module.scss';
 
-function Card({
-  id,
-  pathImg,
-  altImg,
-  types = [],
-  title,
-  description,
-  price,
-  onSubmit,
-}: CardProps) {
+function Card({ catalogProduct, onSubmit }: CardProps) {
+  const cardRef = React.useRef<HTMLDivElement>(null);
+
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     const data = new FormData(event.currentTarget);
-    const productQuantity = data.get('quantity') as string | null;
+    const quantityInputValue = data.get('quantity') as string | null;
 
-    if (productQuantity) {
+    const quantity = Number.isNaN(quantityInputValue)
+      ? 0
+      : Number(quantityInputValue);
+
+    if (quantity) {
       onSubmit({
-        id,
-        quantity: productQuantity,
+        id: catalogProduct.id,
+        title: catalogProduct.title,
+        pathImg: catalogProduct.pathImg,
+        altImg: catalogProduct.altImg,
+        price: catalogProduct.price,
+        quantity,
       });
     }
   };
 
+  React.useEffect(() => {
+    if (catalogProduct.active) {
+      cardRef.current?.classList.add('catalog-card__active');
+    }
+  }, [catalogProduct.active]);
+
   return (
-    <div className={styles.card}>
+    <div ref={cardRef} className={styles.card}>
       <div>
         <Image
           className={styles['card__product-image']}
-          src={pathImg}
-          alt={altImg}
+          src={catalogProduct.pathImg}
+          alt={catalogProduct.altImg}
           width={120}
           height={120}
         />
@@ -47,20 +54,20 @@ function Card({
 
       <div className={styles.card__product}>
         <ul>
-          {types.map(type => (
+          {catalogProduct.types.map(type => (
             <li key={type.replaceAll(' ', '-')}>{type}</li>
           ))}
         </ul>
 
         <div className={styles['card__product-information']}>
-          <h3>{title}</h3>
-          <p>{description}</p>
+          <h3>{catalogProduct.title}</h3>
+          <p>{catalogProduct.description}</p>
         </div>
       </div>
 
       <div className={styles['card__purchase-section']}>
         <span className={styles['card__purchase-section--price']}>
-          R$ <strong>{moneyMask(price)}</strong>
+          R$ <strong>{moneyMask(catalogProduct.price)}</strong>
         </span>
 
         <form onSubmit={handleSubmit}>
