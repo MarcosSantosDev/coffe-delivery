@@ -7,3 +7,17 @@ export interface CartProduct
   > {
   quantity: number;
 }
+
+export interface ShoppingCart {
+  form: {
+    cep: string;
+    street: string;
+    number: string;
+    complement: string;
+    district: string;
+    city: string;
+    uf: string;
+    card: string;
+    quantity: string;
+  };
+}
