@@ -16,12 +16,19 @@ export function setItem<T>(key: string, data: T) {
   }
 }
 
+export function removeItem(key: string) {
+  if (typeof window !== 'undefined') {
+    window.sessionStorage.removeItem(key);
+  }
+}
+
 function sessionStorage<T>(sessionStorageKey: string, initialData: T) {
   return {
     getState: () => getItem<T>(sessionStorageKey, initialData),
     setNewState: (newState: T) => {
       setItem<T>(sessionStorageKey, newState);
     },
+    removeItem: () => removeItem(sessionStorageKey),
   };
 }
 

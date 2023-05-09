@@ -6,6 +6,8 @@ import { usePathname, useRouter } from 'next/navigation';
 import CartList from '@/common/components/context/cart/CartList/CartList';
 import { RadioButton, TextField } from '@/common/components/form';
 import { Button } from '@/common/components/structure';
+import useShoppingCart from '@/common/context/useShoppingCart';
+import useConfirmOrder from '@/common/hooks/useConfirmOrder';
 import {
   Bank,
   MapPinLine,
@@ -16,25 +18,61 @@ import {
 
 import styles from './Form.module.scss';
 
+function SubmitButton() {
+  const shoppingCart = useShoppingCart(state => {
+    return {
+      cartIsEmpty: state.products.length === 0,
+    };
+  });
+
+  return (
+    <Button
+      type="submit"
+      custom={{
+        backgroundColor: 'yellow',
+        textColor: 'white',
+        textWeight: 'bold',
+        size: 'md',
+      }}
+      disabled={shoppingCart.cartIsEmpty}
+    >
+      CONFIRMAR PEDIDO
+    </Button>
+  );
+}
+
 function Form() {
   const router = useRouter();
   const pathname = usePathname();
+  const confirmOrder = useConfirmOrder();
 
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-    // const formData = new FormData(event.currentTarget);
+    const formData = new FormData(event.currentTarget);
 
-    // const data = {
-    //   cep: formData.get('address-cep'),
-    //   street: formData.get('address-street'),
-    //   number: formData.get('address-number'),
-    //   complement: formData.get('address-complement'),
-    //   district: formData.get('address-district'),
-    //   city: formData.get('address-city'),
-    //   uf: formData.get('address-uf'),
-    //   card: formData.get('card'),
-    //   quantity: formData.get('quantity'),
-    // };
+    const formValues = {
+      cep: formData.get('address-cep') as string,
+      street: formData.get('address-street') as string,
+      number: formData.get('address-number') as string,
+      complement: formData.get('address-complement') as string,
+      district: formData.get('address-district') as string,
+      city: formData.get('address-city') as string,
+      uf: formData.get('address-uf') as string,
+      card: formData.get('card') as string,
+      quantity: formData.get('quantity') as string,
+    };
+
+    confirmOrder.setNewState({
+      address: {
+        street: formValues.street,
+        number: formValues.number,
+        complement: formValues.complement,
+        district: formValues.district,
+        city: formValues.city,
+        uf: formValues.uf,
+      },
+      paymentType: formValues.card,
+    });
 
     router.push(`${pathname}/confirmed-order`);
   };
@@ -130,18 +168,7 @@ function Form() {
 
         <div className={styles['shopping-cart__card-fields--rounded-edge']}>
           <CartList />
-
-          <Button
-            type="submit"
-            custom={{
-              backgroundColor: 'yellow',
-              textColor: 'white',
-              textWeight: 'bold',
-              size: 'md',
-            }}
-          >
-            CONFIRMAR PEDIDO
-          </Button>
+          <SubmitButton />
         </div>
       </div>
     </form>
