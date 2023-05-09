@@ -1,6 +1,6 @@
 export function getItem<T>(key: string, initialData: T): T {
   if (typeof window !== 'undefined') {
-    const item = window.localStorage.getItem(key);
+    const item = window.sessionStorage.getItem(key);
 
     if (item) {
       return JSON.parse(item);
@@ -12,17 +12,17 @@ export function getItem<T>(key: string, initialData: T): T {
 
 export function setItem<T>(key: string, data: T) {
   if (typeof window !== 'undefined') {
-    window.localStorage.setItem(key, JSON.stringify(data));
+    window.sessionStorage.setItem(key, JSON.stringify(data));
   }
 }
 
-function localStorage<T>(localStorageKey: string, initialData: T) {
+function sessionStorage<T>(sessionStorageKey: string, initialData: T) {
   return {
-    getState: () => getItem<T>(localStorageKey, initialData),
+    getState: () => getItem<T>(sessionStorageKey, initialData),
     setNewState: (newState: T) => {
-      setItem<T>(localStorageKey, newState);
+      setItem<T>(sessionStorageKey, newState);
     },
   };
 }
 
-export default localStorage;
+export default sessionStorage;

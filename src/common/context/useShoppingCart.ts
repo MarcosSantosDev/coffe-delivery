@@ -3,8 +3,9 @@
 import { create } from 'zustand';
 import { immer } from 'zustand/middleware/immer';
 
+import { SHOPPING_CART_PRODUCTS } from '@/common/constants';
 import { CartProduct } from '@/common/types/cart';
-import localStorage from '@/common/utils/localStorage';
+import sessionStorage from '@/common/utils/sessionStorage';
 
 interface CartState {
   products: CartProduct[];
@@ -22,13 +23,12 @@ interface CartActions {
 const initialData: CartState = {
   products: [],
 };
-const cartLocalStoreKey = '@coffe-delevery:cart-store';
 
-const cartLocalStorage = localStorage(cartLocalStoreKey, initialData);
+const cartSessionStorage = sessionStorage(SHOPPING_CART_PRODUCTS, initialData);
 
 const useShoppingCart = create(
   immer<CartState & CartActions>(set => {
-    const initialCartState = cartLocalStorage.getState();
+    const initialCartState = cartSessionStorage.getState();
 
     return {
       products: initialCartState.products,
@@ -44,7 +44,7 @@ const useShoppingCart = create(
 
           state.products.push(newProduct);
 
-          cartLocalStorage.setNewState(state);
+          cartSessionStorage.setNewState(state);
         });
       },
       updateProductQuantity: (productId, quantity) => {
@@ -60,7 +60,7 @@ const useShoppingCart = create(
             return product;
           });
 
-          cartLocalStorage.setNewState(state);
+          cartSessionStorage.setNewState(state);
         });
       },
       removeProduct: productId => {
@@ -69,7 +69,7 @@ const useShoppingCart = create(
             product => product.id !== productId,
           );
 
-          cartLocalStorage.setNewState(state);
+          cartSessionStorage.setNewState(state);
         });
       },
     };
