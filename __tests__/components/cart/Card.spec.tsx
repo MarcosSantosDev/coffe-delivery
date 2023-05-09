@@ -1,14 +1,16 @@
 import { fireEvent, render, screen } from '@testing-library/react';
 
 import Card from '@/common/components/context/cart/Card/Card';
+import { CartProduct } from '@/common/types/cart';
 import { moneyMask } from '@/common/utils/masks';
 
-const coffeMock = {
+const coffeMock: CartProduct = {
   id: '132',
   pathImg: 'assets/catalog/cappuccino-coffee.svg',
   altImg: 'coffe american',
   title: 'Capuccino',
   price: 9.9,
+  quantity: 1,
 };
 
 describe('Card component', () => {
@@ -18,7 +20,7 @@ describe('Card component', () => {
   it('should render the component', () => {
     render(
       <Card
-        {...coffeMock}
+        cartProduct={coffeMock}
         onRemove={onRemoveMocked}
         onChangeQuantity={onChangeQuantityMocked}
       />,
@@ -49,7 +51,7 @@ describe('Card component', () => {
   it('should call the "onRemove" function when clicking on the "REMOVER" button', () => {
     render(
       <Card
-        {...coffeMock}
+        cartProduct={coffeMock}
         onRemove={onRemoveMocked}
         onChangeQuantity={onChangeQuantityMocked}
       />,
@@ -66,7 +68,7 @@ describe('Card component', () => {
   it('should call the "onChangeQuantity" function when clicking on the "+" icon button and receiving the value 2 as a change', () => {
     render(
       <Card
-        {...coffeMock}
+        cartProduct={coffeMock}
         onRemove={onRemoveMocked}
         onChangeQuantity={onChangeQuantityMocked}
       />,
